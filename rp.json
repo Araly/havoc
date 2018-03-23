@@ -1,0 +1,14 @@
+{
+  "isaac": {
+    "name": "MIZ'HAR",
+    "specs": [70, 25, 70, 55],
+    "description": "Khajiit",
+    "inventory": "#mizhar "
+  },
+  "william": {
+    "name": "SORENTH",
+    "specs": [65, 60, 65, 30],
+    "description": "Argonien",
+    "inventory": "#sorenth "
+  }
+}
