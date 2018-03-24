@@ -103,9 +103,12 @@ bot.on('message', (message) => {
         }
         message.reply(text);
     }
-	else if (command.startsWith('addchar')) {
+	/*else if (command.startsWith('addchar')) {
+		let args = command.slice(1);
+		if (args.length == 1) {
 
-	}
+		}
+	}*/
 	/*else if (command.startsWith('vjoin')) {
         if (!message.guild) {
             message.reply('Sorry, you need to be in a server for voice to work.');
