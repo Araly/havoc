@@ -1,16 +1,26 @@
 {
 	"mizhar": {
-		"guild": "",
+		"guild": "139834630755844096",
 		"name": "Miz'har",
 		"specs": [70, 25, 70, 55],
 		"description": "Khajiit",
 		"inventory": "#mizhar "
 	},
 	"sorenth": {
-		"guild": "",
+		"guild": "139834630755844096",
     	"name": "Sorenth",
     	"specs": [65, 60, 65, 30],
     	"description": "Argonien",
     	"inventory": "#sorenth "
+	},
+	"aiko": {
+		"guild": "",
+		"name": "Aiko",
+		"description": "feline"
+	},
+	"lex": {
+		"guild": "",
+		"name" : "Lex",
+		"description": "fenerox"
 	}
 }

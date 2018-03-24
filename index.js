@@ -14,12 +14,15 @@ bot.on('message', (message) => {
     }
 
     let command = message.content.slice(1);
-    if (command.startsWith('havoc')) {
+	command = command.split(' ');
+    if (command[0] == 'havoc') {
         message.reply('Hello, nice to meet you. I\'m havoc. https://github.com/Araly/havoc. Type `help` for more information');
-    } else if (command.startsWith('ping')) {
+    }
+	else if (command[0] == 'ping') {
         message.reply('pong\n```guild:' + message.guild.id + '```');
-    } else if (command.startsWith('r')) {
-        var args = command.split(' ').slice(1);
+    }
+	else if (command[0] == 'r' || command[0] == 'roll') {
+        var args = command.slice(1);
         if (args.length == 0) {
             var rand = Math.floor(Math.random() * 100) + 1;
             if (rand <= 5) {
@@ -39,8 +42,9 @@ bot.on('message', (message) => {
             sum += args[i];
         }
         message.reply(sum + ' = (' + args.join(' + ') + ')');
-    } else if (command.startsWith('help')) {
-        let args = command.split(' ').slice(1);
+    }
+	else if (command[0] == 'help') {
+        let args = command.slice(1);
         if (args.length == 0) {
             var response = 'Here is the help menu, type *' + prefix + 'help command* to know more about the command.';
             var commandsAndDescriptions = ['help|Brings this very help menu.', 'ping|pong', 'roll|Rolls a king dice, 10 by default. You can specify as many dice as you want.|roll 6 4', 'char|A quick resume of the characters'];
@@ -52,8 +56,9 @@ bot.on('message', (message) => {
             }
             message.reply(response);
         }
-    } else if (command.startsWith('char')) {
-        let args = command.split(' ').slice(1);
+    }
+	else if (command[0] == 'char') {
+        let args = command.slice(1);
         /*if (args.length == 3) {
             switch (args[1]) {
                 case 'hp':
@@ -97,7 +102,11 @@ bot.on('message', (message) => {
 			}
         }
         message.reply(text);
-    } /*else if (command.startsWith('vjoin')) {
+    }
+	else if (command.startsWith('addchar')) {
+
+	}
+	/*else if (command.startsWith('vjoin')) {
         if (!message.guild) {
             message.reply('Sorry, you need to be in a server for voice to work.');
         } else if (!message.member.voiceChannel) {
@@ -123,7 +132,8 @@ function relativeBar(value, max) {
     for (let i = 0; i < 20; i++) {
         if (i < (value / max) * 20) {
             text += '#';
-        } else {
+        }
+		else {
             text += ' ';
         }
     }
