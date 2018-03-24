@@ -15,9 +15,9 @@ bot.on('message', (message) => {
 
     let command = message.content.slice(1);
     if (command.startsWith('havoc')) {
-        message.reply('Hello, I am the Node.js version of myself, nice to meet you ! For the moment I am very incomplete, but this version of me is to become the live one.');
+        message.reply('Hello, nice to meet you. I\'m havoc. https://github.com/Araly/havoc. Type `help` for more information');
     } else if (command.startsWith('ping')) {
-        message.reply('pong');
+        message.reply('pong\n```guild:' + message.guild.id + '```');
     } else if (command.startsWith('r')) {
         var args = command.split(' ').slice(1);
         if (args.length == 0) {

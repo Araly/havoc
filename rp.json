@@ -1,14 +1,16 @@
 {
-  "isaac": {
-    "name": "MIZ'HAR",
-    "specs": [70, 25, 70, 55],
-    "description": "Khajiit",
-    "inventory": "#mizhar "
-  },
-  "william": {
-    "name": "SORENTH",
-    "specs": [65, 60, 65, 30],
-    "description": "Argonien",
-    "inventory": "#sorenth "
-  }
+	"mizhar": {
+		"guild": "",
+		"name": "Miz'har",
+		"specs": [70, 25, 70, 55],
+		"description": "Khajiit",
+		"inventory": "#mizhar "
+	},
+	"sorenth": {
+		"guild": "",
+    	"name": "Sorenth",
+    	"specs": [65, 60, 65, 30],
+    	"description": "Argonien",
+    	"inventory": "#sorenth "
+	}
 }
