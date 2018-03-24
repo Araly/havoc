@@ -91,10 +91,11 @@ bot.on('message', (message) => {
         }*/
         var text = '';
         for (character in rp) {
-			text += '\n**' + rp[character].name + '**\nDex Con Men Soc: ' + rp[character].specs + '\nDescription: ' + rp[character].description + '\nInventory: ' + rp[character].inventory + '\n';
-			//text += '**' + rp[character].name + '**\nHP: ' + rp[character].hp + '/' + rp[character].hpmax + '\n' + relativeBar(rp[character].hp, rp[character].hpmax) + '\nMP: ' + rp[character].mp + '/' + rp[character].mpmax + '\n' + relativeBar(rp[character].mp, rp[character].mpmax) + '\nSpecs: ' + rp[character].specs + '\nDescription: ' + rp[character].description + '\nInventory: ' + rp[character].inventory + '\nGold: ' + rp[character].money + '\n\n';
+			if (rp[character].guild == message.guild.id) {
+				text += '\n**' + rp[character].name + '**\nDex Con Men Soc: ' + rp[character].specs + '\nDescription: ' + rp[character].description + '\nInventory: ' + rp[character].inventory + '\n';
+				//text += '**' + rp[character].name + '**\nHP: ' + rp[character].hp + '/' + rp[character].hpmax + '\n' + relativeBar(rp[character].hp, rp[character].hpmax) + '\nMP: ' + rp[character].mp + '/' + rp[character].mpmax + '\n' + relativeBar(rp[character].mp, rp[character].mpmax) + '\nSpecs: ' + rp[character].specs + '\nDescription: ' + rp[character].description + '\nInventory: ' + rp[character].inventory + '\nGold: ' + rp[character].money + '\n\n';
+			}
         }
-
         message.reply(text);
     } /*else if (command.startsWith('vjoin')) {
         if (!message.guild) {
